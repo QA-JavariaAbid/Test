@@ -43,6 +43,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Enable auto-merge for PR
-        uses: peter-evans/enable-pull-request-automerge@v3
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
