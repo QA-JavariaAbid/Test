@@ -42,6 +42,8 @@ jobs:
     if: success()
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
       - name: Enable auto-merge for PR
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
