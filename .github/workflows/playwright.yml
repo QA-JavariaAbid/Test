@@ -37,15 +37,4 @@ jobs:
           path: playwright-report/
           retention-days: 30
 
-  auto-merge:
-    needs: test
-    if: success()
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-      - name: Enable auto-merge for PR
-        uses: peter-evans/enable-pull-request-automerge@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          merge-method: merge   # Options: merge | squash | rebase
+ 
